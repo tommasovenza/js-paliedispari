@@ -21,37 +21,70 @@
 
 var parola = prompt('inserisci una parola');
 
-
+var parolaArray = [];
 
 // ciclo la parola per creare un array
 
-// for (i = 0; i < parola.length; i++) {
+for (i = 0; i < parola.length; i++) {
 
-//     var letteraCorrente = (parola[i]);
+    var letteraCorrente = (parola[i]);
 
-//     console.log(letteraCorrente);
+    console.log(letteraCorrente);
 
-//     parolaArray.push(letteraCorrente); 
+    parolaArray.push(letteraCorrente); 
+
+    
+}
+console.log(parolaArray);
+
+
+
+var parolaDue = prompt('inserisci una parola');
+
+var parolaArrayDue = [];
+
+
+// ciclo la seconda parola per creare un altro array
+
+for (var i = parolaDue.length - 1; i >= 0; i-- ) {
+
+    var letteraCorrente = (parolaDue[i]);
+
+    console.log(letteraCorrente);
+
+    parolaArrayDue.push(letteraCorrente); 
+
+    
+}
+console.log(parolaArrayDue);
+
+
+
+
+
+
+
+
+
+// provo a risolvere senza la funzione
+
+// function leggiParola() {
+
+//     for (i = 0; i < parola.length; i++) {
+
+//         var parolaArray = [];
+
+//         var letteraCorrente = (parola[i]);
+    
+//         // console.log(letteraCorrente);
+    
+//         parolaArray.push(letteraCorrente); 
+
+//         var risultato = parolaArray.push(letteraCorrente);
+
+//         return risultato;
+        
+//     }
 // }
 
-
-function leggiParola() {
-    for (i = 0; i < parola.length; i++) {
-
-        var parolaArray = [];
-        var letteraCorrente = (parola[i]);
-    
-        console.log(letteraCorrente);
-    
-        parolaArray.push(letteraCorrente); 
-
-        var risultato = parolaArray.push(letteraCorrente);
-
-        return risultato
-
-        
-    }
-}
-
-function leggiParola();
-console.log(risultato);
+// leggiParola();
