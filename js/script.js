@@ -40,25 +40,28 @@ console.log(parolaArray);
 
 
 var parolaDue = prompt('inserisci una parola');
-
+var letteraCorrenteDue;
 var parolaArrayDue = [];
 
 
-// ciclo la seconda parola per creare un altro array
+// ciclo la seconda parola (al contrario) per creare un altro array
 
 for (var i = parolaDue.length - 1; i >= 0; i-- ) {
 
-    var letteraCorrente = (parolaDue[i]);
+    var letteraCorrenteDue = (parolaDue[i]);
 
     console.log(letteraCorrente);
 
     parolaArrayDue.push(letteraCorrente); 
 
-    
 }
 console.log(parolaArrayDue);
 
-
+if (letteraCorrente === letteraCorrenteDue) {
+    alert('la parola è palindroma');
+} else {
+    alert('la parola non è palindroma');
+}
 
 
 
