@@ -22,10 +22,17 @@
 
 var parola = prompt('inserisci una parola');
 var parolaArray = [];
+
+// ciclo la parola per creare un array
+
 for (i = 0; i < parola.length; i++) {
 
-    
+    var letteraCorrente = (parola[i]);
 
+    console.log(letteraCorrente);
+
+    parolaArray.push(letteraCorrente);
+    console.log(parolaArray);
 }
 
 
