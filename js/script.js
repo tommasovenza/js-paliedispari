@@ -40,7 +40,6 @@ console.log(parolaArray);
 
 
 var parolaDue = prompt('inserisci una parola');
-var letteraCorrenteDue;
 var parolaArrayDue = [];
 
 
@@ -57,11 +56,7 @@ for (var i = parolaDue.length - 1; i >= 0; i-- ) {
 }
 console.log(parolaArrayDue);
 
-if (letteraCorrente === letteraCorrenteDue) {
-    alert('la parola è palindroma');
-} else {
-    alert('la parola non è palindroma');
-}
+
 
 
 
