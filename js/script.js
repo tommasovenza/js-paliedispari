@@ -1,3 +1,44 @@
+// esercizio 1
+
+// Palidroma
+// Chiedere all’utente di inserire una parola
+// Creare una funzione per capire se la parola inserita è palindroma
+
+// l'utente inserisce due parole
+var parola = prompt('inserisci una parola di almeno 4 lettere');
+var parolaDue = prompt('inserisci una parola di almeno 4 lettere');
+
+var stringaVuota = '';
+
+// primo ciclo for
+for (i = 0; i < parola.length; i++) {
+
+    stringaVuota = stringaVuota + parola[i];
+}
+
+console.log(stringaVuota);
+
+var stringaVuotaDue = '';
+
+
+// secondo ciclo for
+for (var i = parolaDue.length - 1; i >= 0; i--) {
+
+    stringaVuotaDue = stringaVuotaDue + parolaDue[i];
+
+}
+
+console.log(stringaVuotaDue);
+
+// l'if
+if (stringaVuota === stringaVuotaDue) {
+    alert('parola palindroma');
+} else {
+    alert('parola non palindroma');
+}
+
+
+
 
 // esercizio 2
 
