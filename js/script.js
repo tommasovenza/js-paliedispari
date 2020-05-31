@@ -1,88 +1,41 @@
-// una funzione per capire se una parola è palindroma
 
-// (    appunti     )
+// esercizio 2
 
-// una parola palindroma è una parola che ha le stesse lettere se le leggo da sinistra verso destra o da destra verso sinistra.
+// Pari e Dispari
+// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+// Sommiamo i due numeri
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+// Dichiariamo chi ha vinto
 
-// nel caso della parola     radar r = (0) a = (1) d = (2) a = (3) r = (4)      da sinistra verso destra
-//                           radar r = (0) a = (3) d = (2) a = (3) r = (4)      da destra verso sinistra 
+// l'utente sceglie se pari o dispari
+var pariODispari = prompt('scegli e scrivi se pari o dispari');
+console.log(pariODispari);
 
-// posizione 1 = posizione 5
+// l'utente sceglie un numero
+var numeroUtente = parseInt(prompt('scegli e scrivi un numero compreso tra 1 e 5'));
+console.log(numeroUtente);
 
-// posizione 2 = posizione 4
+// numero computer
+var numeroPC = Math.floor(Math.random() * 5) + 1;
+console.log(numeroPC);
 
-// posizione 3 = posizione 3
+// il risultato
+var risultato = somma(numeroUtente, numeroPC);
+console.log(risultato);
 
-//        (           fine appunti        )
-
-
-
-// inserita una parola ne ricavo l'array
-
-var parola = prompt('inserisci una parola');
-
-var parolaArray = [];
-
-// ciclo la parola per creare un array
-
-for (i = 0; i < parola.length; i++) {
-
-    var letteraCorrente = (parola[i]);
-
-    console.log(letteraCorrente);
-
-    parolaArray.push(letteraCorrente); 
-
-    
+// l'if
+if (((pariODispari === 'pari') && (risultato % 2 === 0)) || ((pariODispari === 'dispari') && (risultato % 2 != 0))) { 
+    alert('hai vinto');
+} else {
+   alert('hai perso');
 }
-console.log(parolaArray);
 
 
+// la funzione
+function somma(numeroUtente, numeroPC) {
 
-var parolaDue = prompt('inserisci una parola');
-var parolaArrayDue = [];
+    var addizione = numeroUtente + numeroPC;
 
-
-// ciclo la seconda parola (al contrario) per creare un altro array
-
-for (var i = parolaDue.length - 1; i >= 0; i-- ) {
-
-    var letteraCorrenteDue = (parolaDue[i]);
-
-    console.log(letteraCorrente);
-
-    parolaArrayDue.push(letteraCorrente); 
-
+    return addizione;
 }
-console.log(parolaArrayDue);
-
-
-
-
-
-
-
-
-
-// provo a risolvere senza la funzione
-
-// function leggiParola() {
-
-//     for (i = 0; i < parola.length; i++) {
-
-//         var parolaArray = [];
-
-//         var letteraCorrente = (parola[i]);
-    
-//         // console.log(letteraCorrente);
-    
-//         parolaArray.push(letteraCorrente); 
-
-//         var risultato = parolaArray.push(letteraCorrente);
-
-//         return risultato;
-        
-//     }
-// }
-
-// leggiParola();
