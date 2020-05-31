@@ -9,25 +9,12 @@ var parola = prompt('inserisci una parola di almeno 4 lettere');
 var parolaDue = prompt('inserisci una parola di almeno 4 lettere');
 
 var stringaVuota = '';
-
-// primo ciclo for
-for (i = 0; i < parola.length; i++) {
-
-    stringaVuota = stringaVuota + parola[i];
-}
-
-console.log(stringaVuota);
-
 var stringaVuotaDue = '';
 
+stringaVuota = ciclaParola(parola);
+stringaVuotaDue = ciclaParolaContrario(parolaDue);
 
-// secondo ciclo for
-for (var i = parolaDue.length - 1; i >= 0; i--) {
-
-    stringaVuotaDue = stringaVuotaDue + parolaDue[i];
-
-}
-
+console.log(stringaVuota);
 console.log(stringaVuotaDue);
 
 // l'if
@@ -36,6 +23,35 @@ if (stringaVuota === stringaVuotaDue) {
 } else {
     alert('parola non palindroma');
 }
+
+// funzione ciclaparola
+function ciclaParola(parola) {
+
+    for (i = 0; i < parola.length; i++) {
+
+        stringaVuota = stringaVuota + parola[i];
+    }
+
+    return stringaVuota;
+}
+
+// funzione ciclaparola al contrario
+function ciclaParolaContrario(parolaDue) {
+
+    // secondo ciclo for
+    for (var i = parolaDue.length - 1; i >= 0; i--) {
+
+    stringaVuotaDue = stringaVuotaDue + parolaDue[i];
+
+    }
+
+    return stringaVuotaDue;
+}
+
+
+
+
+
 
 
 
@@ -71,7 +87,6 @@ if (((pariODispari === 'pari') && (risultato % 2 === 0)) || ((pariODispari === '
 } else {
    alert('hai perso');
 }
-
 
 // la funzione
 function somma(numeroUtente, numeroPC) {
