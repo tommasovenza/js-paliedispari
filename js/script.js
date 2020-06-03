@@ -49,13 +49,6 @@ function ciclaParolaContrario(parolaDue) {
 }
 
 
-
-
-
-
-
-
-
 // esercizio 2
 
 // Pari e Dispari
@@ -74,19 +67,33 @@ var numeroUtente = parseInt(prompt('scegli e scrivi un numero compreso tra 1 e 5
 console.log(numeroUtente);
 
 // numero computer
-var numeroPC = Math.floor(Math.random() * 5) + 1;
-console.log(numeroPC);
+function numeroComputer(numeroPC) {
+
+    var numeroPC = Math.floor(Math.random() * 5) + 1;
+    
+    return numeroPC
+}
+
+var numero = numeroComputer();
+console.log(numero);
 
 // il risultato
-var risultato = somma(numeroUtente, numeroPC);
+var risultato = somma(numeroUtente, numero);
 console.log(risultato);
 
 // l'if
-if (((pariODispari === 'pari') && (risultato % 2 === 0)) || ((pariODispari === 'dispari') && (risultato % 2 != 0))) { 
-    alert('hai vinto');
-} else {
-   alert('hai perso');
+function whoIsWinner() {
+
+    if (((pariODispari === 'pari') && (risultato % 2 === 0)) || ((pariODispari === 'dispari') && (risultato % 2 != 0))) { 
+        alert('hai vinto');
+    } else {
+       alert('hai perso');
+    }
+
 }
+
+whoIsWinner();
+
 
 // la funzione
 function somma(numeroUtente, numeroPC) {
